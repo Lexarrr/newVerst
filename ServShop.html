@@ -7,6 +7,7 @@
     <meta name="keywords" content="сайт, клиент, Рсторан, Кафе">
     <title>Serv-Shop.ru</title>
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/forall.css">
     <style media="screen">
     </style>
 </head>
@@ -33,10 +34,58 @@
 
           <div class="serc">
             <form>
-              <input type="text" placeholder="Искать здесь...">
-              <button type="submit"></button>
+              <input type="search" placeholder="Искать здесь...">
+              <button class="bsub" type="submit"></button>
             </form>
             </div>
+        
+
+        <button class="cart" id="cart">
+            <img class="cart__image" src="pic/cart.png" alt="Cart" />
+            <div class="cart__num" id="cart_num">0</div>
+        </button>
+
+        <div class="popup">
+            <div class="popup__container" id="popup_container">
+              <div class="popup__item">
+                <h1 class="popup__title">Оформление заказа</h1>
+              </div>
+              <div class="popup__item" id="popup_product_list">
+                <div class="popup__product">
+                  <div class="popup__product-wrap">
+                    <img
+                      src="*.png"
+                      alt="A"
+                      class="popup__product-image"
+                    />
+                    <h2 class="popup__product-title">
+                      lorem
+                    </h2>
+                  </div>
+                  <div class="popup__product-wrap">
+                    <div class="popup__product-price">0</div>
+                    <button class="popup__product-delete">✖</button>
+                  </div>
+                </div>
+              </div>
+              <div class="popup__item">
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Итого</h2>
+                  <output class="popup__cost-value" id="popup_cost">0</output>
+                </div>
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Скидка</h2>
+                  <output class="popup__cost-value" id="popup_discount">0</output>
+                </div>
+                <div class="popup__cost">
+                  <h2 class="popup__cost-title">Итого со скидкой</h2>
+                  <output class="popup__cost-value" id="popup_cost_discount"
+                    >0</output>
+                </div>
+              </div>
+              <button class="popup__close" id="popup_close">✖</button>
+            </div>
+          </div>
         </div>
     </header>
 
@@ -55,58 +104,84 @@
       </div>
     </main>
 
+    <div class="space">
+
+    </div>
+
 
 <div>
+       
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex,
-        soluta eveniet blanditiis culpa ut? Mollitia numquam, 
-        doloribus veritatis magnam corrupti pariatur qui! Officia pariatur,
-        voluptates nesciunt doloribus asperiores non.
-    </p>
+<div class="container">
+
+<a href="#mypop" class="button" id="button">
+    <div class="button__line"></div>
+    <div class="button__line"></div>
+    <span class="button__text">Рассчитать стоимость</span>
+    <div class="button__drow1"></div>
+    <div class="button__drow2"></div>
+</a>
+
+
+  <div id="myPop" class="pop">
+    
+    <button id="closePop">&#10006</button>
+    <div class="pop-content">
+        <h3 style="color:green;"> Рассчитать стоимость</h3>
+        
+        <form action="" method="post">
+          <fieldset>
+            <div class="cont-fiel">
+            <div class="line1">
+            <div class="fio">
+            <label for="user_name"> Ваше имя </label>
+                <input type="text" placeholder="Введите имя" value="" name="user_name" id="user_name" required>
+            </div>
+            <div class="mail">
+            <label for="user_mail"> Ваш email </label>
+                <input type="email" name="email_type" placeholder="Example@mail.ru" required>
+            </div>
+          </div>
+          <div class="line2">
+            <div class="number">
+            <label for="user_number"> Ваш номер </label>
+                <input type="tel" name="number" placeholder="+7()" required>
+            </div>
+            
+          </div>
+          </div>
+        </fieldset>
+        <div class = "but">
+
+          <!-- <button id="closePop" hidden></button> -->
+
+          <!-- <div class="btn">
+            <div class="btn-back">
+              <p>Are you sure you want to do that?</p>
+              <button class="yes" id="closePop">Yes</button>
+              <button class="no" >No</button>
+            </div>
+            <div class="btn-front">Delete</div>
+          </div> -->
+          
+          <a href="#" class="butt" id="butt">Рассчитать</a>
+          </div>
+        </form>
+    </div>
+
+  </div>
+
 
 </div>
-
-<div>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex,
-        soluta eveniet blanditiis culpa ut? Mollitia numquam, 
-        doloribus veritatis magnam corrupti pariatur qui! Officia pariatur,
-        voluptates nesciunt doloribus asperiores non.
-    </p>
-
-
-
-</div>
-
-<div>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex,
-        soluta eveniet blanditiis culpa ut? Mollitia numquam, 
-        doloribus veritatis magnam corrupti pariatur qui! Officia pariatur,
-        voluptates nesciunt doloribus asperiores non.
-    </p>
-
-
-
-</div>
-
-<div>
-
-    <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex,
-        soluta eveniet blanditiis culpa ut? Mollitia numquam, 
-        doloribus veritatis magnam corrupti pariatur qui! Officia pariatur,
-        voluptates nesciunt doloribus asperiores non.
-    </p>
 
 
 
 </div>
 
 <script src="js/scripts.js"></script>
+<script src="js/bascket.js"></script>
+<script src="js/formcost.js"></script>
+
 <footer>
 
     <nav class="low" id="low">
@@ -120,7 +195,7 @@
       </nav> 
 
 
-<p>Есть вопросы? Звоните: 8 (800) 888-88-88 (495) 888-88-88 Режим работы с 6 до 24</p>
+<div class="dno">Есть вопросы? Звоните: 8 (800) 888-88-88 (495) 888-88-88 Режим работы с 6 до 24</div>
 </footer>
 </body>
 </html>
